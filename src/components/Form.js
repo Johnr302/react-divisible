@@ -5,6 +5,7 @@ export default function Form(props) {
   const { setNumber, number } = props;
   const [inputNumber, setInputNumber] = useState(null);
 
+  // console.log(number, "in form");
   return (
     <div>
       <label for="number">Please enter a number.</label>
@@ -16,7 +17,10 @@ export default function Form(props) {
         onChange={(e) => setInputNumber(e.target.value)}
       />
       <Button
-        onClick={(e) => setNumber(inputNumber)}
+        onClick={(e) => {
+          console.log(inputNumber, "in Form");
+          Number(setNumber(inputNumber));
+        }}
         type="submit"
         className="btn btn__primary btn__lg"
       >

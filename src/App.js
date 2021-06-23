@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, DivisibleBy2 } from "./index";
+import { Form, DivisibleResults } from "./index";
 
 function App() {
   const [number, setNumber] = useState(null);
@@ -13,18 +13,19 @@ function App() {
       .map((num) => {
         return Number(num);
       });
+    console.log(numberArray.current);
   };
 
   useEffect(() => {
+    console.log(number, "app");
     numToArray(number);
-  }, [number]);
-  console.log(numberArray);
+  }, [number, numberArray]);
 
   return (
     <div className="App">
       <h1>Divisibility App</h1>
       <Form setNumber={setNumber} />
-      <DivisibleBy2 numberArray={numberArray} number={number} />
+      <DivisibleResults numberArray={numberArray.current} number={number} />
     </div>
   );
 }
