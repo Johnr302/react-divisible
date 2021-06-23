@@ -1,28 +1,30 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Form from "./components/Form";
+import { Form, DivisibleBy2 } from "./index";
 
 function App() {
   const [number, setNumber] = useState(null);
-  let numberArray = [];
+  const numberArray = useRef([]);
+
   const numToArray = (num) => {
-    numberArray = String(num)
+    numberArray.current = String(num)
       .split("")
       .map((num) => {
         return Number(num);
       });
-    console.log(numberArray);
   };
 
   useEffect(() => {
     numToArray(number);
   }, [number]);
+  console.log(numberArray);
 
   return (
     <div className="App">
       <h1>Divisibility App</h1>
       <Form setNumber={setNumber} />
+      <DivisibleBy2 numberArray={numberArray} number={number} />
     </div>
   );
 }
