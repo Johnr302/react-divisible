@@ -14,7 +14,9 @@ export default function Form(props) {
         type="number"
         id="number"
         value={number}
-        onChange={(e) => setInputNumber(e.target.value)}
+        onChange={(e) => {
+          setInputNumber(e.target.value);
+        }}
       />
       <Button
         onClick={(e) => {
