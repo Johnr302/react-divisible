@@ -2,31 +2,29 @@ import "./App.css";
 import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, DivisibleResults } from "./index";
+import { Container, Row, Col } from "react-bootstrap";
 
 function App() {
   const [number, setNumber] = useState(null);
-  const numberArray = useRef([]);
-
-  const numToArray = (num) => {
-    numberArray.current = String(num)
-      .split("")
-      .map((num) => {
-        return Number(num);
-      });
-    console.log(numberArray.current);
-  };
-
-  useEffect(() => {
-    console.log(number, "app");
-    numToArray(number);
-  }, [number, numberArray]);
 
   return (
-    <div className="App">
-      <h1>Divisibility App</h1>
-      <Form setNumber={setNumber} />
-      <DivisibleResults numberArray={numberArray.current} number={number} />
-    </div>
+    <Container className="App justify-content-md-center text-center">
+      <Row>
+        <Col>
+          <h1>Divisibility App</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Form setNumber={setNumber} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <DivisibleResults number={number} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

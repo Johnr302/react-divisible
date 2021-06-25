@@ -20,7 +20,6 @@ export default function Form(props) {
       />
       <Button
         onClick={(e) => {
-          console.log(inputNumber, "in Form");
           Number(setNumber(inputNumber));
         }}
         type="submit"
