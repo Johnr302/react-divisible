@@ -43,7 +43,7 @@ describe("divisionLogic", () => {
     let testArray = by4list();
 
     testArray.forEach((n) => {
-      expect(divisibleBy4(n), "fail on true " + n).toBe(true);
+      expect(divisibleBy4(n)).toBe(true);
       expect(divisibleBy4(n + 1)).toBe(false);
     });
   });

@@ -22,13 +22,19 @@ function divisibleBy3(number) {
 }
 
 const divisibleBy4 = (number) => {
-  let numberArray = numToArray(number);
-  let ones = numberArray.pop();
-  let tens = numberArray.pop() * 10;
-  return (ones + tens) % 4 === 0;
+  console.log(number, " in 4");
+  if (number && number < 10) {
+    return number % 4 === 0;
+  } else {
+    let numberArray = numToArray(number);
+    let ones = numberArray.pop();
+    let tens = numberArray.pop() * 10;
+    return (ones + tens) % 4 === 0;
+  }
 };
 
 const divisibleBy5 = (number) => {
+  console.log(number, " in 5");
   let numberArray = numToArray(number);
   return (
     numberArray[numberArray.length - 1] === 0 ||
