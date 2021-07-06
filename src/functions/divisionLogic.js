@@ -62,7 +62,6 @@ const divisibleBy9 = (number) => {
   for (let i = 0; i < numberArray.length; i++) {
     result += numberArray[i];
   }
-  console.log(result, "in 9");
   return result % 9 === 0;
 };
 

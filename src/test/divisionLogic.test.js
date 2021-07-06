@@ -9,44 +9,87 @@ import {
   divisibleBy9,
 } from "../functions/divisionLogic";
 
+import {
+  by2list,
+  by3list,
+  by4list,
+  by5list,
+  by6list,
+  by7list,
+  by8list,
+  by9list,
+} from "./testNumber";
+
 describe("divisionLogic", () => {
+  let testArray = by2list();
+
   it("can calculate if a number the divisible by 2", () => {
-    expect(divisibleBy2(4)).toBe(true);
-    expect(divisibleBy2(3)).toBe(false);
+    testArray.forEach((n) => {
+      expect(divisibleBy2(n)).toBe(true);
+      expect(divisibleBy2(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 3", () => {
-    expect(divisibleBy3(90)).toBe(true);
-    expect(divisibleBy3(91)).toBe(false);
+    let testArray = by3list();
+
+    testArray.forEach((n) => {
+      expect(divisibleBy3(n)).toBe(true);
+      expect(divisibleBy3(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 4", () => {
-    expect(divisibleBy4(16)).toBe(true);
-    expect(divisibleBy4(17)).toBe(false);
+    let testArray = by4list();
+
+    testArray.forEach((n) => {
+      expect(divisibleBy4(n), "fail on true " + n).toBe(true);
+      expect(divisibleBy4(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 5", () => {
-    expect(divisibleBy5(100)).toBe(true);
-    expect(divisibleBy5(101)).toBe(false);
+    let testArray = by5list();
+
+    testArray.forEach((n) => {
+      expect(divisibleBy5(n)).toBe(true);
+      expect(divisibleBy5(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 6", () => {
-    expect(divisibleBy6(36)).toBe(true);
-    expect(divisibleBy6(37)).toBe(false);
+    let testArray = by6list();
+
+    testArray.forEach((n) => {
+      expect(divisibleBy6(n)).toBe(true);
+      expect(divisibleBy6(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 7", () => {
-    expect(divisibleBy7(49)).toBe(true);
-    expect(divisibleBy7(50)).toBe(false);
+    let testArray = by7list();
+
+    testArray.forEach((n) => {
+      expect(divisibleBy7(n)).toBe(true);
+      expect(divisibleBy7(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 8", () => {
-    expect(divisibleBy8(64)).toBe(true);
-    expect(divisibleBy8(66)).toBe(false);
+    let testArray = by8list();
+
+    // testArray.forEach((n) => {
+    //   expect(divisibleBy8(n)).toBe(true);
+    //   expect(divisibleBy8(n + 1)).toBe(false);
+    // });
   });
 
   it("can calculate if a number the divisible by 9", () => {
-    expect(divisibleBy9(72)).toBe(true);
-    expect(divisibleBy9(77)).toBe(false);
+    let testArray = by9list();
+
+    testArray.forEach((n) => {
+      expect(divisibleBy9(n)).toBe(true);
+      expect(divisibleBy9(n + 1)).toBe(false);
+    });
   });
 });
