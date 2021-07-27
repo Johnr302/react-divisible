@@ -22,7 +22,6 @@ function divisibleBy3(number) {
 }
 
 const divisibleBy4 = (number) => {
-  console.log(number, " in 4");
   if (number && number < 10) {
     return number % 4 === 0;
   } else {
@@ -34,7 +33,6 @@ const divisibleBy4 = (number) => {
 };
 
 const divisibleBy5 = (number) => {
-  console.log(number, " in 5");
   let numberArray = numToArray(number);
   return (
     numberArray[numberArray.length - 1] === 0 ||

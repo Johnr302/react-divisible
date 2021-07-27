@@ -78,10 +78,10 @@ describe("divisionLogic", () => {
   it("can calculate if a number the divisible by 8", () => {
     let testArray = by8list();
 
-    // testArray.forEach((n) => {
-    //   expect(divisibleBy8(n)).toBe(true);
-    //   expect(divisibleBy8(n + 1)).toBe(false);
-    // });
+    testArray.forEach((n) => {
+      expect(divisibleBy8(n)).toBe(true);
+      expect(divisibleBy8(n + 1)).toBe(false);
+    });
   });
 
   it("can calculate if a number the divisible by 9", () => {
