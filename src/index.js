@@ -3,8 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-export { default as Form } from "./components/Form";
-export { default as DivisibleResults } from "./components/DivisibleResults";
 
 ReactDOM.render(
   <React.StrictMode>

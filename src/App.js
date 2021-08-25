@@ -1,10 +1,11 @@
 import "./App.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, DivisibleResults } from "./index";
+import Form from "./components/Form";
+import DivisibleResults from "./components/DivisibleResults";
 import { Container, Row, Col } from "react-bootstrap";
 
-function App() {
+export default function App() {
   const [number, setNumber] = useState(null);
 
   return (
@@ -27,5 +28,3 @@ function App() {
     </Container>
   );
 }
-
-export default App;

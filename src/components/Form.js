@@ -5,10 +5,9 @@ export default function Form(props) {
   const { setNumber, number } = props;
   const [inputNumber, setInputNumber] = useState(null);
 
-  // console.log(number, "in form");
   return (
     <div>
-      <label for="number">Please enter a number.</label>
+      <label htmlFor="number">Please enter a number.</label>
       <br />
       <input
         type="number"
