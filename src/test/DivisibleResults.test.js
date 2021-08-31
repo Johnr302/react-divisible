@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, { shallow, mount } from "enzyme";
+import Enzyme, { shallow } from "enzyme";
 
 import DivisibleResults from "../components/DivisibleResults";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
